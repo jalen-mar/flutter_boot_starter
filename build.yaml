@@ -1,0 +1,9 @@
+builders:
+  starter:
+    target: ":starter"
+    import: "package:flutter_boot_starter/StarterGenerator.dart"
+    builder_factories: ["starterBuilder"]
+    build_extensions: { ".dart": [".starter.g.part"] }
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
